@@ -2,9 +2,9 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'collections/articles/ArticlesCollection',
-  'text!templates/articles/articlesTemplate.html'
-], function($, _, Backbone, ArticlesCollection, articlesTemplate){
+  'collections/SectionArticleCollection',
+  'text!templates/sectionTemplate.html'
+], function($, _, Backbone, SectionArticleCollection, sectionTemplate){
  
   var ArticlesView = Backbone.View.extend({
    el: $("#page"),

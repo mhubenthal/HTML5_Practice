@@ -1,2 +1,2 @@
 ### Website practice site.
-Simple practice site using Backbone.js and both fixed and responsive layouts.
+Simple practice site using Backbone.js and Require.js. Both fixed and responsive layouts.

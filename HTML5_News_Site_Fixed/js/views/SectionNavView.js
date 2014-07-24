@@ -7,8 +7,8 @@ define([
 ], function($, _, Backbone, CategoryCollection, sectionNavTemplate){
  
   var SectionNavView = Backbone.View.extend({
-    el: 'nav',
-    class: 'section-nav',
+    el: 'time',
+    class: 'main-date',
     
     initialize:function() {
       var that = this;
@@ -29,7 +29,7 @@ define([
       };
 
       var compiledTemplate = _.template(sectionNavTemplate, data);
-      this.$el.html(compiledTemplate); 
+      this.$el.after(compiledTemplate); 
     }
   });
   

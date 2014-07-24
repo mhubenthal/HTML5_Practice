@@ -25,7 +25,7 @@ define([
       var data = {messages: messageArray};
 
       var compiledTemplate = _.template(adTemplate, data);
-      this.$el.append(compiledTemplate); 
+      this.$el.after(compiledTemplate); 
     }
   });
   

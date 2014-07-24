@@ -9,8 +9,8 @@ define([
 ], function($, _, Backbone, DateModel, SiteNavView, SectionNavView, headerTemplate){
  
   var HeaderView = Backbone.View.extend({
-    el: 'header',
-    class: 'main-header',
+    el: 'h1',
+    id: 'header-placeholder',
     
     render: function(){
       // Get current date
@@ -19,7 +19,7 @@ define([
       
       // Add header to page
       var compiledTemplate = _.template(headerTemplate, data);
-      this.$el.html(compiledTemplate);
+      this.$el.replaceWith(compiledTemplate);
 
       // Render navigation components of header (sub-views)
       // Sub-views will automatically call their render method

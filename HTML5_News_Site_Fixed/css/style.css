@@ -1,10 +1,40 @@
-
-/* =============================================================================
-   Primary styles
-   Author: 
-   ========================================================================== */
 body {
-  background: #ebebeb;
+  width: 960px;
+  font-family: Arvo;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #A7CAE8;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.site-nav {
+}
+
+.main-header {
+}
+
+.main-title {
+  font: bold 36pt Arvo;
+  color: #3CCCCC;
+}
+
+.main-date {
+  font: regular 14pt Arvo;
+  color: #333333;
+}
+
+.section-nav {
+  font: regular 14pt Arvo;
+  color: #333333;
 }
 
 #container {

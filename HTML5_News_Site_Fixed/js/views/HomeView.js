@@ -2,25 +2,26 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'text!templates/homeTemplate.html'
-], function($, _, Backbone, homeTemplate){
+  'views/AdView',
+  'views/FeatureView'
+], function($, _, Backbone, AdView, FeatureView){
 
   var HomeView = Backbone.View.extend({
-    el: $("#page"),
+    el: 'section',
+    class: 'main-section',
 
     render: function(){
-      /*
       //$('.menu li').removeClass('active');
       //$('.menu li a[href="#"]').parent().addClass('active');
-      this.$el.html(homeTemplate);
-
-      //var sidebarView = new SidebarView();
-      //sidebarView.render();
-    */
+      //this.$el.append(homeTemplate);
+      
+      // Render sub-views
+      // Sub-views will automatically call their render method
+      // once data has loaded.
+      var adView = new AdView();
+      var featureView = new FeatureView();
     }
-
   });
 
   return HomeView;
-  
 });

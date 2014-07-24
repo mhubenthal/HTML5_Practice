@@ -2,43 +2,32 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'collections/SectionArticleCollection',
-  'text!templates/sectionTemplate.html'
-], function($, _, Backbone, SectionArticleCollection, sectionTemplate){
+  'collections/AdCollection',
+  'text!templates/adTemplate.html'
+], function($, _, Backbone, AdCollection, adTemplate){
  
-  var ArticlesView = Backbone.View.extend({
-   el: $("#page"),
-  //template: _.template($('#article_list_template').html()),
+  var AdView = Backbone.View.extend({
+    el: 'header',
+    class: 'main-header',
     
     initialize:function() {
       var that = this;
       var onDataHandler = function(collection) {
           that.render();
       }
-      that.collection = new ArticlesCollection([]); 
-      that.collection.fetch({ success : onDataHandler, dataType: "json" });
-
+      that.collection = new AdCollection(); 
+      that.collection.fetch({ success : onDataHandler, dataType: 'json'});
     },
    
-  render: function() {
-    
-    _.each(this.collection.models, function(article){
-      var lArticleId = article.attributes['id'];
-      var lArticleHeadline = article.attributes['headLine'];
-      //console.log(article.attributes['headLine']);
-      var lArticleSnippet = article.attributes['snippet'];
-      
-      var data = {'id': lArticleId, 'headline': lArticleHeadline, 'snippet': lArticleSnippet};
+    render: function(){
+      // Get array of section displayName(s) attribute
+      var messageArray = this.collection.pluck('message');
+      var data = {messages: messageArray};
 
-      var compiledTemplate = _.template(articlesTemplate, data);
-      console.log(typeof(compiledTemplate));
-      this.$el.append( compiledTemplate ); 
-    }, this);
-    return this;
-  }
-   
- });
+      var compiledTemplate = _.template(adTemplate, data);
+      this.$el.append(compiledTemplate); 
+    }
+  });
   
-  return ArticlesView;
-  
+  return AdView;
 });

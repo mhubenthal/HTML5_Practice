@@ -2,30 +2,30 @@ define([
   'jquery',
   'underscore',
   'backbone',
+  'models/DateModel',
   'views/SiteNavView',
   'views/SectionNavView',
-  'text!templates/headerTemplate.html'
-], function($, _, Backbone, CategoryCollection, headerTemplate){
+  'text!templates/headerTemplate.html',
+], function($, _, Backbone, DateModel, SiteNavView, SectionNavView, headerTemplate){
  
   var HeaderView = Backbone.View.extend({
-    el: $("#page"),
-
+    el: 'header',
+    class: 'main-header',
+    
     render: function(){
-      $('.menu li').removeClass('active');
-      $('.menu li a[href="#"]').parent().addClass('active');
-
+      // Get current date
+      var todaysDate = new DateModel();
+      var data = {today: todaysDate.get('today')};
+      
       // Add header to page
-      console.log("BEFORE");
-      console.log(headerTemplate);
-      var compiledTemplate = _.template(headerTemplate);
-      console.log(compiledTemplate);
-      this.$el.append(compiledTemplate);
+      var compiledTemplate = _.template(headerTemplate, data);
+      this.$el.html(compiledTemplate);
 
       // Render navigation components of header (sub-views)
-      var siteNavView = new SiteNavView();
+      // Sub-views will automatically call their render method
+      // once data has loaded.
+      //var siteNavView = new SiteNavView();
       var sectionNavView = new SectionNavView();
-      siteNavView.render();
-      sectionNavView.render();
     }
   });
   return HeaderView;

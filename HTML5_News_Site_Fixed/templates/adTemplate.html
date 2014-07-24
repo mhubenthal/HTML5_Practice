@@ -1,3 +1,7 @@
-<section class="banner-ad">
-  <%= message %>
-</section>
+<aside class='banner-ad'>
+  <ul>
+    <% _.each(messages, function(message){ %>
+     <li><%= message %></a></li> 
+    <% }); %>
+  </ul>
+</aside>

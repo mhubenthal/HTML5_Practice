@@ -6,39 +6,31 @@ define([
   'text!templates/sectionTemplate.html'
 ], function($, _, Backbone, SectionArticleCollection, sectionTemplate){
  
-  var ArticlesView = Backbone.View.extend({
-   el: $("#page"),
-  //template: _.template($('#article_list_template').html()),
+  var SectionView = Backbone.View.extend({
+    el: 'section',
+    class: 'main-section',
     
-    initialize:function() {
+    initialize: function(topic) {
       var that = this;
       var onDataHandler = function(collection) {
           that.render();
       }
-      that.collection = new ArticlesCollection([]); 
-      that.collection.fetch({ success : onDataHandler, dataType: "json" });
-
+      that.collection = new SectionArticleCollection(topic); 
+      that.collection.fetch({ success : onDataHandler, dataType: 'json'});
     },
    
-  render: function() {
-    
-    _.each(this.collection.models, function(article){
-      var lArticleId = article.attributes['id'];
-      var lArticleHeadline = article.attributes['headLine'];
-      //console.log(article.attributes['headLine']);
-      var lArticleSnippet = article.attributes['snippet'];
+    render: function() {
+      var data = {
+        topic: this.topic,
+        main: this.collection.pluck('main')[0],
+        aside: this.collection.pluck('aside')[0]
+      };
       
-      var data = {'id': lArticleId, 'headline': lArticleHeadline, 'snippet': lArticleSnippet};
 
-      var compiledTemplate = _.template(articlesTemplate, data);
-      console.log(typeof(compiledTemplate));
-      this.$el.append( compiledTemplate ); 
-    }, this);
-    return this;
-  }
-   
+      var compiledTemplate = _.template(sectionTemplate, data);
+      this.$el.html(compiledTemplate);
+    } 
  });
   
-  return ArticlesView;
-  
+  return SectionView;
 });

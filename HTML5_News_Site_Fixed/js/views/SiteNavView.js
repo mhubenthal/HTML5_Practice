@@ -2,43 +2,32 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'collections/SectionArticleCollection',
-  'text!templates/sectionTemplate.html'
-], function($, _, Backbone, SectionArticleCollection, sectionTemplate){
+  'collections/CategoryCollection',
+  'text!templates/siteNavTemplate.html'
+], function($, _, Backbone, CategoryCollection, siteNavTemplate){
  
-  var ArticlesView = Backbone.View.extend({
-   el: $("#page"),
-  //template: _.template($('#article_list_template').html()),
+  var SiteNavView = Backbone.View.extend({
+    el: 'nav',
+    class: 'site-nav',
     
     initialize:function() {
       var that = this;
       var onDataHandler = function(collection) {
           that.render();
       }
-      that.collection = new ArticlesCollection([]); 
-      that.collection.fetch({ success : onDataHandler, dataType: "json" });
-
+      that.collection = new CategoryCollection(); 
+      that.collection.fetch({ success : onDataHandler, dataType: 'json' });
     },
    
-  render: function() {
-    
-    _.each(this.collection.models, function(article){
-      var lArticleId = article.attributes['id'];
-      var lArticleHeadline = article.attributes['headLine'];
-      //console.log(article.attributes['headLine']);
-      var lArticleSnippet = article.attributes['snippet'];
-      
-      var data = {'id': lArticleId, 'headline': lArticleHeadline, 'snippet': lArticleSnippet};
+    render: function(){
+      // Get array of section displayName(s) attribute
+      var sectionArray = this.collection.pluck('displayName');
+      var data = {sections: sectionArray};
 
-      var compiledTemplate = _.template(articlesTemplate, data);
-      console.log(typeof(compiledTemplate));
-      this.$el.append( compiledTemplate ); 
-    }, this);
-    return this;
-  }
-   
- });
+      //var compiledTemplate = _.template(siteNavTemplate, data);
+      //this.$el.html(compiledTemplate); 
+    }
+  });
   
-  return ArticlesView;
-  
+  return SiteNavView;
 });

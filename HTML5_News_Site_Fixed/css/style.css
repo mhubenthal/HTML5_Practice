@@ -3,17 +3,15 @@
 /*******************/
 
 body{
-  width: 960px;
+  width: 1100px;
+  margin-left: 10px;
+  margin-right: 10px;
   font-family: Arvo;
 }
 
 body a{
   text-decoration: none;
   color: #333333;
-}
-
-body a:hover{
-  color: #A7CAE8;
 }
 
 body ul{
@@ -32,23 +30,43 @@ body li{
 /**********/
 
 .site-nav{
+  margin-left: -35px;
+  margin-bottom: 15px;
+  font: normal 9pt Arvo; 
+  color: #333333;
+}
+
+.site-nav a#currentUser{
+  float: right;
   font: normal 9pt Arvo; 
   color: #333333;
 }
 
 .main-title{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: -15px;
   font: bold 36pt Arvo;
   color: #333333;
 }
 
-.main-date{
+.main-date p{
+  text-align: center;
+  margin-bottom: 25px;
   font: normal 12pt Arvo;
   color: #333333;
 }
 
 .section-nav{
+  text-align: center;
+  margin-top: -4px;
+  margin-bottom: -10px;
   font: normal 12pt Arvo;
   color: #333333;
+}
+
+.section-nav a:hover{
+  color: #999999;
 }
 
 .section-nav li.active{
@@ -57,111 +75,224 @@ body li{
 }
 
 /*************/
-/* HOME PAGE */
+/* BANNER AD */
 /*************/
 
 .banner-ad{
   font: bold italic 18pt Arvo;
   color: #333333;
   background-color: #D5D5D5;
+  width: 100%;
+  height: 100px;
+  transition: height .5s;
+}
+
+.banner-ad #message1{
+  padding-top: 35px;
+  padding-left: 40px;
+}
+
+.banner-ad #message2{
+  padding-left: 46px; 
+  margin-top: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 2s opacity 1s;
+}
+
+.banner-ad:hover{
+  height: 150px;
+}
+
+.banner-ad:hover > #message2{
+  visibility: visible;
+  opacity: 1;
+  transition-delay: .2s;
 }
 
 .banner-ad a{
-  font: normal 9pt Arvo;
+  font: normal 10pt Arvo;
+  float: right;
+  color: #FFFFFF;
+  padding-top: 4px;
+  padding-right: 12px;
+}
+
+.banner-ad a:hover{
+  color: #333333;
+}
+
+/*************/
+/* HOME PAGE */
+/*************/
+
+.aside-front-page{
+  width: 200px;
+  display: inline;
+  float: left;
+  margin-right: 15px;
 }
 
 .aside-front-page h4{
+  margin-top: 25px;
+  margin-bottom: 20px;
   font: bold italic 18pt Arvo;
   color: #333333;
 }
 
-p.aside-front-page{
-  font: normal 13pt Arvo;
+.aside-front-page p{
+  font: normal 10pt Arvo;
   color: #333333;
+}
+
+.main-front-page{
+  width: 420px;
+  display: inline;
+  float: left;
+  margin-right: 15px;
 }
 
 .main-front-page h4:first-child{
   font-style: italic;
-  font-size: 18pt;
+  font-size: 16pt;
   font-family: Arvo;
   color: #333333;
 }
 
 .main-front-page h4{
-  font: bold italic 18pt Arvo;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font: bold italic 16pt Arvo;
   color: #333333;
 }
 
 .main-front-page p{
-  font: normal 12pt Arvo;
+  font: normal 10pt Arvo;
   color: #333333;
 }
 
+.opinion-front-page{
+  width: 440px;
+  display: inline-block;
+  float: left;
+}
+
+.opinion-content{
+  margin-right: 10px;
+  width: 210px;
+  display: inline;
+  float: left;
+}
+
 .opinion-front-page h3{
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: -10px;
   font: italic 16pt Arvo;
   color: #333333;
 }
 
 .opinion-front-page h4:first-child{
-  font: italic 13pt Arvo;
+  font: italic 12pt Arvo;
   color: #333333;
 }
 
 .opinion-front-page h4{
-  font: bold italic 13pt Arvo;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font: bold italic 12pt Arvo;
   color: #333333;
 }
 
 .opinion-front-page p{
-  font: normal 12pt Arvo;
+  font: normal 10pt Arvo;
   color: #333333;
 }
 
+.travel-front-page{
+  width: 440px;
+  display: inline-block;
+  float: left;
+}
+
+.travel-content{
+  margin-right: 10px;
+  width: 210px;
+  display: inline;
+  float: left;
+}
+
 .travel-front-page h3{
+  margin-top: 5px;
+  margin-bottom: -10px;
   font: bold 12pt Arvo;
   color: #333333;
 }
 
 .travel-front-page h4:first-child{
-  font: bold 13pt Arvo;
+  font: bold 12pt Arvo;
   color: #333333;
 }
 
 .travel-front-page h4{
-  font: bold italic 13pt Arvo;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font: bold italic 12pt Arvo;
   color: #333333;
 }
 
 .travel-front-page p{
-  font: normal 12pt Arvo;
+  font: normal 10pt Arvo;
   color: #333333;
 }
 
-/*************/
+/****************/
 /* SECTION PAGE */
-/*************/
+/****************/
+
+.section-article{
+  width: 650px;
+  display: inline;
+  float: left;
+  margin-right: 20px;
+}
 
 .section-article h4{
+  margin-top: 25px;
+  margin-bottom: 20px;
   font: bold italic 26pt Arvo;
   color: #333333;
 }
 
 .section-article figcaption{
-  font: italic 12pt Arvo;
+  font: italic 10pt Arvo;
   color: #333333;
 }
 
 .section-article p{
-  font: normal 12pt Arvo;
+  font: normal 10pt Arvo;
   color: #333333;
 }
 
+.related-article{
+  width: 430px;
+  display: inline;
+  float: left;
+}
+
 .related-article h4{
+  margin-top: 25px;
+  margin-bottom: 20px;
   font: italic 16pt Arvo;
   color: #333333;
 }
 
+.related-article figcaption{
+  font: italic 10pt Arvo;
+  color: #333333;
+}
+
 .related-article p{
-  font: normal 12pt Arvo;
+  font: normal 10pt Arvo;
   color: #333333;
 }

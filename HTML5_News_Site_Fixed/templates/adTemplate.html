@@ -1,8 +1,5 @@
-<aside class='banner-ad'>
-  <ul>
-    <% _.each(messages, function(message){ %>
-     <li><%= message %></a></li> 
-    <% }); %>
-  </ul>
-  <a href='index.html'>Click to expand <span class='fa fa-chevron-down'></span></a>
+<aside id='ad' class='banner-ad'>
+  <a href='#ad'>Click to expand <span class='fa fa-chevron-down fa-2x'></span></a>
+  <p id='message1'><%= messages[0] %></p>
+  <p id='message2'><%= messages[1] %></p>
 </aside>

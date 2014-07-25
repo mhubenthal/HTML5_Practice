@@ -19,13 +19,11 @@ define([
       that.collection.fetch({success : onDataHandler, dataType: 'json'});
     },
    
-    render: function(){
+    render: function(){  
       // Get array of section displayName(s) attribute
       var sectionArray = this.collection.pluck('displayName');
-      var linkArray = this.collection.pluck('shortName');
       var data = {
-        sections: sectionArray,
-        links: linkArray
+        sections: sectionArray
       };
 
       var compiledTemplate = _.template(sectionNavTemplate, data);

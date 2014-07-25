@@ -22,9 +22,10 @@ define([
       this.$el.replaceWith(compiledTemplate);
 
       // Render navigation components of header (sub-views)
-      // Sub-views will automatically call their render method
+      // sectionNavView will automatically call its render method
       // once data has loaded.
-      //var siteNavView = new SiteNavView();
+      var siteNavView = new SiteNavView();
+      siteNavView.render();
       var sectionNavView = new SectionNavView();
     }
   });

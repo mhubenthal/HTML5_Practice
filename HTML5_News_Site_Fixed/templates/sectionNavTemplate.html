@@ -1,7 +1,9 @@
+<hr>
 <nav class='section-nav'>
   <ul>
-    <% _.each(links, function(link){ %>
-     <li><a href=<%= "/#/" + link %>><%= link %></a></li> 
+    <% _.each(sections, function(section){ 
+       var link = section.toLowerCase(); %>
+     <li><a href=<%= "/#/" + link %>><%= section %></a></li> 
     <% }); %>
   </ul>
 </nav>

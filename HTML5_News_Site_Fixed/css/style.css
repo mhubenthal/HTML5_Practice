@@ -1,318 +1,167 @@
-body {
+/*******************/
+/* ALL SITE STYLES */
+/*******************/
+
+body{
   width: 960px;
   font-family: Arvo;
 }
 
-a {
+body a{
   text-decoration: none;
+  color: #333333;
 }
 
-a:hover {
+body a:hover{
   color: #A7CAE8;
 }
 
-ul {
+body ul{
   list-style-type: none;
-  padding-left: 0;
+  padding: : none;
+  margin: none;
 }
 
-.site-nav {
+body li{
+  padding-right: 3em;
+  display: inline;
 }
 
-.main-header {
+/**********/
+/* HEADER */
+/**********/
+
+.site-nav{
+  font: normal 9pt Arvo; 
+  color: #333333;
 }
 
-.main-title {
+.main-title{
   font: bold 36pt Arvo;
-  color: #3CCCCC;
-}
-
-.main-date {
-  font: regular 14pt Arvo;
   color: #333333;
 }
 
-.section-nav {
-  font: regular 14pt Arvo;
+.main-date{
+  font: normal 12pt Arvo;
   color: #333333;
 }
 
-#container {
-  width: 960px;
-  margin: auto;
-  min-height: 500px;
-  background: #fff;
-}
-#menu {
-  background: #444;
-  height: 30px; color: #fff; text-align: right;
-}
-#menu ul {
-  list-style: none;
-  margin: 0; padding: 0;
-}
-#menu ul li {
-  float: left;
-  margin-left: 10px;
-}
-#menu ul li a {
-  color: #fff;
-  line-height: 30px;
-  text-decoration: none;
-}
-#menu ul li a:hover {
-  color: #ccc;
-}
-#container {
-
-}
-#logo {
-   padding: 20px;
-}
-h1{
-  padding: 0;
-  margin: 0;
-}
-#page {
-  border-top: 1px solid #ebebeb;
-  border-bottom: 1px solid #ebebeb;
-  min-height: 400px;
-  padding: 20px;
-  overflow: hidden;
+.section-nav{
+  font: normal 12pt Arvo;
+  color: #333333;
 }
 
-#page  {
-  width: 960px;
+.section-nav li.active{
+  font: bold 14pt Arvo;
+  color: #333333;
 }
 
- #page .main {
-    display: block;
-    position:relative;
-    top: 0px;
-    left: 0px;
-    padding: 0px;
-    margin: 0px;
-    width: 500px;
-    float: left;
-    overflow: hidden;
-  }
+/*************/
+/* HOME PAGE */
+/*************/
 
- #page .sidebar {
-    display: block;
-    position:relative;
-    top: 0px;
-    left: 0px;
-    padding: 10px;
-    margin: 0px;
-    width: 400px;
-    height: 300px;
-    background-color:#FFF;
-    float: left;
-  }
-
-  #page .sidebar .ad {
-    clear:both;
-  }
-
-  #page .sidebar .ad .pic {
-    display: block;
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-    float: left;
-    top: 0px;
-    left: 0px;
-    width: 150px;
-  }  
-
-  #page .sidebar .ad .info {
-    display: block;
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-    float: left;
-    top: 0px;
-    left: 0px;
-    width: 250px;
-  }  
-
-  #page .sidebar .ad .info h4 {
-    font-size: 16px;
-    color:#666;
-  }
-
-  #page .sidebar .ad .info p {
-    font-size: 10px;
-    color:#999;
-  }
-
-#page .contributors-stats ul {
-  list-style: none;
+.banner-ad{
+  font: bold italic 18pt Arvo;
+  color: #333333;
+  background-color: #D5D5D5;
 }
 
-#page .contributors-stats ul li {
-  display:block;
-  position: relative;
-  height: 20px;
+.banner-ad a{
+  font: normal 9pt Arvo;
 }
 
-#page .contributors-stats ul li p {
-  font-size: 20px;
-  color:#999;
-  font-weight: bold; 
-  margin: 0px;
-  padding: 0px;
+.aside-front-page h4{
+  font: bold italic 18pt Arvo;
+  color: #333333;
 }
 
-#page #contributors-list {
-
+p.aside-front-page{
+  font: normal 13pt Arvo;
+  color: #333333;
 }
 
-#page #contributors-list .podium {
-  display: block;
-  position: relative;
-  float: left;
-  height: 100%;
-  width: 320px;
+.main-front-page h4:first-child{
+  font-style: italic;
+  font-size: 18pt;
+  font-family: Arvo;
+  color: #333333;
 }
 
-#page #contributors-list .podium .top {
-  display: block;
-  position: relative;
-  float: left;
+.main-front-page h4{
+  font: bold italic 18pt Arvo;
+  color: #333333;
 }
 
-#page #contributors-list .podium .base {
-  display: block;
-  position: relative;
-  float: left;
-  background-color: rgba(214, 214, 214, 0.38);
-  width: 100%;
+.main-front-page p{
+  font: normal 12pt Arvo;
+  color: #333333;
 }
 
-#page #contributors-list .podium .base p {
-  text-align: left;
-  color: #666;
-  font-weight: normal; 
-  font-size: 12px; 
-  margin-left: 10px;
+.opinion-front-page h3{
+  font: italic 16pt Arvo;
+  color: #333333;
 }
 
-#page #contributors-list ul.contributors {
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-  }
+.opinion-front-page h4:first-child{
+  font: italic 13pt Arvo;
+  color: #333333;
+}
 
-  #page #contributors-list ul.contributors li {
-    display: block;
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-    top: 0px;
-    left: 0px;
-    float: left;
-  }
+.opinion-front-page h4{
+  font: bold italic 13pt Arvo;
+  color: #333333;
+}
 
- #page #contributors-list ul.contributors li div.contributor {
-    display: block;
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-    top: 0px;
-    left: 0px;
- } 
+.opinion-front-page p{
+  font: normal 12pt Arvo;
+  color: #333333;
+}
 
- #page #contributors-list ul.contributors li div.contributor ul {
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
+.travel-front-page h3{
+  font: bold 12pt Arvo;
+  color: #333333;
+}
 
- } 
+.travel-front-page h4:first-child{
+  font: bold 13pt Arvo;
+  color: #333333;
+}
 
- #page #contributors-list ul.contributors li div.contributor ul li {
-    display: block;
-    position: absolute;
-    margin: 0px;
-    padding: 0px;
-    top: 0px;
-    left: 0px;
- }
+.travel-front-page h4{
+  font: bold italic 13pt Arvo;
+  color: #333333;
+}
 
- #page #contributors-list ul.contributors li div.contributor ul li.username {
-    z-index: 2;
-    height: 14px;
-    border: none;
- }
+.travel-front-page p{
+  font: normal 12pt Arvo;
+  color: #333333;
+}
 
- #page #contributors-list ul.contributors li div.contributor ul li.username p {
-    display:block;
-    position: absolute;
-    margin: 0px;
-    padding: 0px;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 14px;
-    text-align: center;
-    font-size: 10px;
-    font-weight: normal;
-    color:#333;
-    line-height: 14px !important;
- }
+/*************/
+/* SECTION PAGE */
+/*************/
 
- #page #contributors-list ul.contributors li div.contributor ul li.username p a {
-    color:#333;
-    text-decoration: none;
- }
+.section-article h4{
+  font: bold italic 26pt Arvo;
+  color: #333333;
+}
 
- #page #contributors-list ul.contributors li div.contributor ul li.username p a:hover {
-    color:#334231;
- }
+.section-article figcaption{
+  font: italic 12pt Arvo;
+  color: #333333;
+}
 
- #page #contributors-list ul.contributors li div.contributor ul li.pic {
-    z-index: 1;
- }
+.section-article p{
+  font: normal 12pt Arvo;
+  color: #333333;
+}
 
- #page #contributors-list ul.contributors li div.contributor ul li.pic a {
-    display:block;
-    position: absolute;
-    margin: 0px;
-    padding: 0px;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    border: none;
- }
+.related-article h4{
+  font: italic 16pt Arvo;
+  color: #333333;
+}
 
- #page #contributors-list ul.contributors li div.contributor ul li.pic p {
-    display: block;
-    position: absolute;
-    margin: 0px;
-    padding: 0px;
-    top: 0px;
-    left: 0px;
-    width: 100%;
- }
-
- #page #contributors-list ul.contributors li div.contributor ul li.contributions {
-    z-index: 3;
-    pointer-events:none;
- }
-
- #page #contributors-list ul.contributors li div.contributor ul li.contributions p {
-    display:block;
-    position: absolute;
-    left:0px;
-    width:100%;
-    height: 15%;
-    top: 85%;
-    text-align: center;
-    line-height: 14px !important;
-    font-size: 10px;
-    font-weight: normal;
-    color:#333;
-    margin:0px;
-    padding:0px;
- }
-
+.related-article p{
+  font: normal 12pt Arvo;
+  color: #333333;
+}

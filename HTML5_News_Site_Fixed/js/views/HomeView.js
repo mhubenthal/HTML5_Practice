@@ -11,10 +11,6 @@ define([
     class: 'main-section',
 
     render: function(){
-      //$('.menu li').removeClass('active');
-      //$('.menu li a[href="#"]').parent().addClass('active');
-      //this.$el.append(homeTemplate);
-      
       // Render sub-views
       // Sub-views will automatically call their render method
       // once data has loaded.

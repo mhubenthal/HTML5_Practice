@@ -1,10 +1,10 @@
 <article class='section-article'>
   <h4><%= main.headLine %></h4>
-  <%= main.fullStory %>
+  <p><% var mainLocation = (main.location).toUpperCase(); %><b><%= mainLocation + ' ' %></b><%= main.fullStory %><% var notSafeForWork = ''; if(main.nsfw){notSafeForWork = '[NSFW]';}%><%= ' ' + notSafeForWork %></p>
 </article>
-<aside class='related-article'>
-  <article>
+<aside>
+  <article class='related-article'>
     <h4><%= aside.headLine %></h4>
-    <%= aside.fullStory %>
+    <p><% var asideLocation = (aside.location).toUpperCase(); %><b><%= asideLocation + ' ' %></b><%= aside.fullStory %><% var notSafeForWork = ''; if(aside.nsfw){notSafeForWork = '[NSFW]';}%><%= ' ' + notSafeForWork %></p>
   </article>
 </aside>

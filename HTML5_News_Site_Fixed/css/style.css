@@ -3,10 +3,11 @@
 /*******************/
 
 body{
-  width: 1100px;
-  margin-left: 10px;
-  margin-right: 10px;
+  width: 960px;
   font-family: Arvo;
+  padding: none;
+  margin: none;
+  color: #333333;
 }
 
 body a{
@@ -14,15 +15,16 @@ body a{
   color: #333333;
 }
 
-body ul{
-  list-style-type: none;
-  padding: : none;
-  margin: none;
-}
-
 body li{
+  list-style-type: none;
+    padding-left: none;
   padding-right: 3em;
   display: inline;
+}
+
+hr{
+  padding: none;
+  margin: none;
 }
 
 /**********/
@@ -30,39 +32,41 @@ body li{
 /**********/
 
 .site-nav{
-  margin-left: -35px;
-  margin-bottom: 15px;
+  height: 35px;
+  width: 100%;
+  line-height: 35px;
   font: normal 9pt Arvo; 
-  color: #333333;
+  margin-bottom: 10px;
 }
 
-.site-nav a#currentUser{
-  float: right;
-  font: normal 9pt Arvo; 
-  color: #333333;
+.site-nav #sectionIcon{
+  margin-left: -30px;
 }
+
+.site-nav #currentUserIcon{
+  padding-right: 15px;
+  float: right;
+}
+
 
 .main-title{
-  text-align: center;
   margin-top: 20px;
-  margin-bottom: -15px;
+  text-align: center;
   font: bold 36pt Arvo;
-  color: #333333;
 }
 
 .main-date p{
+  margin-top: -35px;
+  margin-bottom: 20px;
   text-align: center;
-  margin-bottom: 25px;
   font: normal 12pt Arvo;
-  color: #333333;
 }
 
 .section-nav{
+  margin-top: -5px;
+  margin-bottom: -5px;
   text-align: center;
-  margin-top: -4px;
-  margin-bottom: -10px;
   font: normal 12pt Arvo;
-  color: #333333;
 }
 
 .section-nav a:hover{
@@ -79,29 +83,29 @@ body li{
 /*************/
 
 .banner-ad{
-  font: bold italic 18pt Arvo;
-  color: #333333;
+  font: bold italic 14pt Arvo;
   background-color: #D5D5D5;
   width: 100%;
-  height: 100px;
+  height: 80px;
   transition: height .5s;
 }
 
 .banner-ad #message1{
-  padding-top: 35px;
-  padding-left: 40px;
+  text-align: center;
+  line-height: 80px;
 }
 
 .banner-ad #message2{
-  padding-left: 46px; 
-  margin-top: 5px;
+  text-align: center;
+  margin-left: 30px;
+  margin-top: -40px;
   visibility: hidden;
   opacity: 0;
   transition: visibility 2s opacity 1s;
 }
 
 .banner-ad:hover{
-  height: 150px;
+  height: 110px;
 }
 
 .banner-ad:hover > #message2{
@@ -111,11 +115,11 @@ body li{
 }
 
 .banner-ad a{
-  font: normal 10pt Arvo;
+  margin-left: -200px;
+  font: normal 8pt Arvo;
   float: right;
   color: #FFFFFF;
-  padding-top: 4px;
-  padding-right: 12px;
+  padding-right: 15px;
 }
 
 .banner-ad a:hover{
@@ -127,67 +131,59 @@ body li{
 /*************/
 
 .aside-front-page{
-  width: 200px;
+  width: 188px;
   display: inline;
   float: left;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 .aside-front-page h4{
-  margin-top: 25px;
-  margin-bottom: 20px;
-  font: bold italic 18pt Arvo;
-  color: #333333;
+  margin-bottom: 0px;
+  font: bold italic 16pt Arvo;
 }
 
 .aside-front-page p{
   font: normal 10pt Arvo;
-  color: #333333;
 }
 
 .main-front-page{
-  width: 420px;
+  width: 376px;
   display: inline;
   float: left;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 .main-front-page h4:first-child{
   font-style: italic;
   font-size: 16pt;
   font-family: Arvo;
-  color: #333333;
 }
 
 .main-front-page h4{
-  margin-top: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   font: bold italic 16pt Arvo;
-  color: #333333;
 }
 
 .main-front-page p{
   font: normal 10pt Arvo;
-  color: #333333;
 }
 
 .opinion-front-page{
-  width: 440px;
+  width: 376px;
   display: inline-block;
   float: left;
 }
 
 .opinion-content{
   margin-right: 10px;
-  width: 210px;
+  width: 178px;
   display: inline;
   float: left;
 }
 
 .opinion-front-page h3{
   text-align: center;
-  margin-top: 25px;
-  margin-bottom: -10px;
+  margin-bottom: -15px;
   font: italic 16pt Arvo;
   color: #333333;
 }
@@ -198,52 +194,44 @@ body li{
 }
 
 .opinion-front-page h4{
-  margin-top: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   font: bold italic 12pt Arvo;
-  color: #333333;
 }
 
 .opinion-front-page p{
   font: normal 10pt Arvo;
-  color: #333333;
 }
 
 .travel-front-page{
-  width: 440px;
+  width: 376px;
   display: inline-block;
   float: left;
 }
 
 .travel-content{
   margin-right: 10px;
-  width: 210px;
+  width: 178px;
   display: inline;
   float: left;
 }
 
 .travel-front-page h3{
-  margin-top: 5px;
-  margin-bottom: -10px;
+  margin-top: 10px;
+  margin-bottom: -15px;
   font: bold 12pt Arvo;
-  color: #333333;
 }
 
 .travel-front-page h4:first-child{
   font: bold 12pt Arvo;
-  color: #333333;
 }
 
 .travel-front-page h4{
-  margin-top: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   font: bold italic 12pt Arvo;
-  color: #333333;
 }
 
 .travel-front-page p{
   font: normal 10pt Arvo;
-  color: #333333;
 }
 
 /****************/
@@ -251,15 +239,15 @@ body li{
 /****************/
 
 .section-article{
-  width: 650px;
+  width: 571px;
   display: inline;
   float: left;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .section-article h4{
-  margin-top: 25px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 0px;
   font: bold italic 26pt Arvo;
   color: #333333;
 }
@@ -275,14 +263,14 @@ body li{
 }
 
 .related-article{
-  width: 430px;
+  width: 379px;
   display: inline;
   float: left;
 }
 
 .related-article h4{
-  margin-top: 25px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 0px;
   font: italic 16pt Arvo;
   color: #333333;
 }

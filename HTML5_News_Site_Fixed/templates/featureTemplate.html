@@ -1,40 +1,130 @@
 <section class='aside-front-page'>
   <h4><%= aside[0].headLine %></h4>
+  <figure id='aside-img1'><%
+    var hasImage = '[NO MEDIA]';
+    if(aside[0].hasVideoPlaceholder){
+      hasImage = '[VIDEO]';
+    }
+    if(aside[0].numberOfImages > 0){
+      hasImage = '[PHOTO]';
+    } %>
+    <%= hasImage %>
+  </figure>
   <p><% var asideLocation1 = (aside[0].location).toUpperCase(); %><%= asideLocation1 + " "%><%= aside[0].snippet %><% var notSafeForWork = ''; if(aside[0].nsfw){notSafeForWork = '[NSFW]';}%><%= ' ' + notSafeForWork %></p>
   <hr>
   <h4><%= aside[1].headLine %></h4>
+  <figure id='aside-img2'><%
+    var hasImage = '[NO MEDIA]';
+    if(aside[1].hasVideoPlaceholder){
+      hasImage = '[VIDEO]';
+    }
+    if(aside[1].numberOfImages > 0){
+      hasImage = '[PHOTO]';
+    } %>
+    <%= hasImage %>
+  </figure>
   <p><% var asideLocation2 = (aside[1].location).toUpperCase(); %><%= asideLocation2 + " " %></span><%= aside[1].snippet %><% var notSafeForWork = ''; if(aside[1].nsfw){notSafeForWork = '[NSFW]';}%><%= ' ' + notSafeForWork %></p>
 </section>
         
 <section class='main-front-page'>
   <h4><%= main[0].headLine %></h4>
+  <figure id='main-img1'><%
+    var hasImage = '[NO MEDIA]';
+    if(main[0].hasVideoPlaceholder){
+      hasImage = '[VIDEO]';
+    }
+    if(main[0].numberOfImages > 0){
+      hasImage = '[PHOTO]';
+    } %>
+    <%= hasImage %>
+  </figure>
   <p><% var mainLocation1 = (main[0].location).toUpperCase(); %><b><%= mainLocation1 + " " %></b><%= main[0].snippet %><% var notSafeForWork = ''; if(main[0].nsfw){notSafeForWork = '[NSFW]';}%><%= ' ' + notSafeForWork %></p>
   <h4><%= main[1].headLine %></h4>
+  <figure id='main-img2'><%
+    var hasImage = '[NO MEDIA]';
+    if(main[1].hasVideoPlaceholder){
+      hasImage = '[VIDEO]';
+    }
+    if(main[1].numberOfImages > 0){
+      hasImage = '[PHOTO]';
+    } %>
+    <%= hasImage %>
+  </figure>
   <p><% var mainLocation2 = (main[1].location).toUpperCase(); %><b><%= mainLocation2 + " " %></b><%= main[1].snippet %><% var notSafeForWork = ''; if(main[1].nsfw){notSafeForWork = '[NSFW]';}%><%= ' ' + notSafeForWork %></p>
   <h4><%= main[2].headLine %></h4>
+  <figure id='main-img3'><%
+    var hasImage = '[NO MEDIA]';
+    if(main[2].hasVideoPlaceholder){
+      hasImage = '[VIDEO]';
+    }
+    if(main[2].numberOfImages > 0){
+      hasImage = '[PHOTO]';
+    } %>
+    <%= hasImage %>
+  </figure>
   <p><% var mainLocation3 = (main[0].location).toUpperCase(); %><b><%= mainLocation3 + " " %></b><%= main[2].snippet %><% var notSafeForWork = ''; if(main[2].nsfw){notSafeForWork = '[NSFW]';}%><%= ' ' + notSafeForWork %></p>
 </section>
 
-<section class='opinion-front-page'>
-  <h3>The Opinion Pages</h3>
-  <section class='opinion-content'>
-      <h4><%= opinion[0].headLine %></h4>
-      <p><% var opinionLocation1 = (opinion[0].location).toUpperCase(); %><b><%= opinionLocation1 + " " %></b><%= opinion[0].snippet %><% var notSafeForWork = ''; if(opinion[0].nsfw){notSafeForWork = '[NSFW]';}%><%= ' ' + notSafeForWork %></p>
-    </section>
+  <section class='opinion-front-page'>
+    <h3>The Opinion Pages</h3>
     <section class='opinion-content'>
-      <h4><%= opinion[1].headLine %></h4>
-      <p><% var opinionLocation2 = (opinion[1].location).toUpperCase(); %><b><%= opinionLocation2 + " " %></b><%= opinion[1].snippet %><% var notSafeForWork = ''; if(opinion[1].nsfw){notSafeForWork = '[NSFW]';}%><%= ' ' + notSafeForWork %></p>
-    </section>
-</section>
+        <h4><%= opinion[0].headLine %></h4>
+        <figure id='opinion-img1'><%
+          var hasImage = '[NO MEDIA]';
+          if(opinion[0].hasVideoPlaceholder){
+            hasImage = '[VIDEO]';
+          }
+          if(opinion[0].numberOfImages > 0){
+            hasImage = '[PHOTO]';
+          } %>
+          <%= hasImage %>
+        </figure>
+        <p><% var opinionLocation1 = (opinion[0].location).toUpperCase(); %><b><%= opinionLocation1 + " " %></b><%= opinion[0].snippet %><% var notSafeForWork = ''; if(opinion[0].nsfw){notSafeForWork = '[NSFW]';}%><%= ' ' + notSafeForWork %></p>
+      </section>
+      <section class='opinion-content'>
+        <h4><%= opinion[1].headLine %></h4>
+        <figure id='opinion-img2'><%
+          var hasImage = '[NO MEDIA]';
+          if(opinion[1].hasVideoPlaceholder){
+            hasImage = '[VIDEO]';
+          }
+          if(opinion[1].numberOfImages > 0){
+            hasImage = '[PHOTO]';
+          } %>
+          <%= hasImage %>
+        </figure>
+        <p><% var opinionLocation2 = (opinion[1].location).toUpperCase(); %><b><%= opinionLocation2 + " " %></b><%= opinion[1].snippet %><% var notSafeForWork = ''; if(opinion[1].nsfw){notSafeForWork = '[NSFW]';}%><%= ' ' + notSafeForWork %></p>
+      </section>
+  </section>
 
-<section class='travel-front-page'>
-  <h3>TRAVEL <span class='fa fa-angle-right'></span></h3>
-    <section class='travel-content'>
-      <h4><%= travel[0].headLine %></h4>
-      <p><% var travelLocation1 = (travel[0].location).toUpperCase(); %><b><%= travelLocation1 + " " %></b><%= travel[0].snippet %><% var notSafeForWork = ''; if(travel[0].nsfw){notSafeForWork = '[NSFW]';}%><%= ' ' + notSafeForWork %></p>
-    </section>
-    <section class='travel-content'>
-      <h4><%= travel[1].headLine %></h4>
-      <p><% var travelLocation2 = (travel[1].location).toUpperCase(); %><b><%= travelLocation2 + " " %></b><%= travel[1].snippet %><% var notSafeForWork = ''; if(travel[1].nsfw){notSafeForWork = '[NSFW]';}%><%= ' ' + notSafeForWork %></p>
-    </section>
-</section>
+  <section class='travel-front-page'>
+    <h3>TRAVEL <span class='travel-leader'> > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > ></span></h3>
+      <section class='travel-content'>
+        <h4><%= travel[0].headLine %></h4>
+        <figure id='travel-img1'><%
+          var hasImage = '[NO MEDIA]';
+          if(travel[0].hasVideoPlaceholder){
+            hasImage = '[VIDEO]';
+          }
+          if(travel[0].numberOfImages > 0){
+            hasImage = '[PHOTO]';
+          } %>
+          <%= hasImage %>
+        </figure>
+        <p><% var travelLocation1 = (travel[0].location).toUpperCase(); %><b><%= travelLocation1 + " " %></b><%= travel[0].snippet %><% var notSafeForWork = ''; if(travel[0].nsfw){notSafeForWork = '[NSFW]';}%><%= ' ' + notSafeForWork %></p>
+      </section>
+      <section class='travel-content'>
+        <h4><%= travel[1].headLine %></h4>
+        <figure id='travel-img2'><%
+          var hasImage = '[NO MEDIA]';
+          if(travel[1].hasVideoPlaceholder){
+            hasImage = '[VIDEO]';
+          }
+          if(travel[1].numberOfImages > 0){
+            hasImage = '[PHOTO]';
+          } %>
+          <%= hasImage %>
+        </figure>
+        <p><% var travelLocation2 = (travel[1].location).toUpperCase(); %><b><%= travelLocation2 + " " %></b><%= travel[1].snippet %><% var notSafeForWork = ''; if(travel[1].nsfw){notSafeForWork = '[NSFW]';}%><%= ' ' + notSafeForWork %></p>
+      </section>
+  </section>

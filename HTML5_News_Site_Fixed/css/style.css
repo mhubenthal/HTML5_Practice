@@ -8,6 +8,7 @@ body{
   padding: none;
   margin: none;
   color: #333333;
+  position: relative;
 }
 
 body a{
@@ -17,7 +18,7 @@ body a{
 
 body li{
   list-style-type: none;
-    padding-left: none;
+  padding-left: none;
   padding-right: 3em;
   display: inline;
 }
@@ -32,11 +33,15 @@ hr{
 /**********/
 
 .site-nav{
-  height: 35px;
-  width: 100%;
+  height: 48px;
+  width: 960px;
   line-height: 35px;
   font: normal 9pt Arvo; 
   margin-bottom: 10px;
+  margin-top: -35px;
+  position: fixed;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #333333;
 }
 
 .site-nav #sectionIcon{
@@ -50,7 +55,7 @@ hr{
 
 
 .main-title{
-  margin-top: 20px;
+  padding-top: 50px;
   text-align: center;
   font: bold 36pt Arvo;
 }
@@ -85,27 +90,28 @@ hr{
 .banner-ad{
   font: bold italic 14pt Arvo;
   background-color: #D5D5D5;
-  width: 100%;
-  height: 80px;
+  width: 960px;
+  height: 70px;
   transition: height .5s;
 }
 
 .banner-ad #message1{
   text-align: center;
-  line-height: 80px;
+  line-height: 70px;
 }
 
 .banner-ad #message2{
   text-align: center;
   margin-left: 30px;
-  margin-top: -40px;
+  margin-top: -35px;
   visibility: hidden;
   opacity: 0;
   transition: visibility 2s opacity 1s;
 }
 
 .banner-ad:hover{
-  height: 110px;
+  height: 105px;
+  box-shadow: 0 5px 4px -4px #333333;
 }
 
 .banner-ad:hover > #message2{
@@ -135,6 +141,35 @@ hr{
   display: inline;
   float: left;
   margin-right: 10px;
+  margin-top: 10px;
+}
+
+#aside-img1{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+  height: 188px;
+  width: 188px;
+  background-color: #333333;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 188px;
+}
+
+#aside-img2{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+  height: 100px;
+  width: 188px;
+  background-color: #333333;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 100px;
+}
+
+.aside-front-page hr{
+  margin-bottom: -18px;
 }
 
 .aside-front-page h4{
@@ -151,6 +186,43 @@ hr{
   display: inline;
   float: left;
   margin-right: 10px;
+  margin-top: 10px;
+}
+
+#main-img1{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+  height: 200px;
+  width: 376px;
+  background-color: #333333;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 200px;
+}
+
+#main-img2{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+  height: 150px;
+  width: 376px;
+  background-color: #333333;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 150px;
+}
+
+#main-img3{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+  height: 150px;
+  width: 376px;
+  background-color: #333333;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 150px;
 }
 
 .main-front-page h4:first-child{
@@ -170,8 +242,33 @@ hr{
 
 .opinion-front-page{
   width: 376px;
-  display: inline-block;
+  display: inline;
   float: left;
+  margin-top: 10px;
+}
+
+#opinion-img1{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+  height: 100px;
+  width: 178px;
+  background-color: #333333;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 100px;
+}
+
+#opinion-img2{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+  height: 100px;
+  width: 178px;
+  background-color: #333333;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 100px;
 }
 
 .opinion-content{
@@ -179,6 +276,30 @@ hr{
   width: 178px;
   display: inline;
   float: left;
+}
+
+#travel-img1{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+  height: 100px;
+  width: 178px;
+  background-color: #333333;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 100px;
+}
+
+#travel-img2{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+  height: 100px;
+  width: 178px;
+  background-color: #333333;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 100px;
 }
 
 .opinion-front-page h3{
@@ -204,7 +325,7 @@ hr{
 
 .travel-front-page{
   width: 376px;
-  display: inline-block;
+  display: inline;
   float: left;
 }
 
@@ -219,6 +340,11 @@ hr{
   margin-top: 10px;
   margin-bottom: -15px;
   font: bold 12pt Arvo;
+  overflow-x: hidden;
+}
+
+.travel-leader{
+  color: #D5D5D5;
 }
 
 .travel-front-page h4:first-child{
@@ -239,16 +365,30 @@ hr{
 /****************/
 
 .section-article{
-  width: 571px;
+  width: 565px;
   display: inline;
   float: left;
+  padding-right: 10px;
   margin-right: 10px;
+  border-right: 1px solid #333333;
+}
+
+#section-img{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+  height: 300px;
+  width: 565px;
+  background-color: #333333;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 300px;
 }
 
 .section-article h4{
   margin-top: 15px;
   margin-bottom: 0px;
-  font: bold italic 26pt Arvo;
+  font: bold italic 20pt Arvo;
   color: #333333;
 }
 
@@ -263,15 +403,27 @@ hr{
 }
 
 .related-article{
-  width: 379px;
+  width: 371px;
   display: inline;
   float: left;
+}
+
+#related-img{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+  height: 200px;
+  width: 371px;
+  background-color: #333333;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 200px;
 }
 
 .related-article h4{
   margin-top: 15px;
   margin-bottom: 0px;
-  font: italic 16pt Arvo;
+  font: italic 12pt Arvo;
   color: #333333;
 }
 

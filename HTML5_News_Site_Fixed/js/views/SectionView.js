@@ -26,7 +26,8 @@ define([
         aside: this.collection.pluck('aside')[0]
       };
       
-
+      // Remove the banner ad for section views
+      $('.banner-ad').remove();
       var compiledTemplate = _.template(sectionTemplate, data);
       this.$el.html(compiledTemplate);
     } 

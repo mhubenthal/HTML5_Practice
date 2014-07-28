@@ -1,10 +1,30 @@
 <article class='section-article'>
   <h4><%= main.headLine %></h4>
+  <figure id='section-img'><%
+    var hasImage = '[NO MEDIA]';
+    if(main.hasVideoPlaceholder){
+      hasImage = '[VIDEO]';
+    }
+    if(main.numberOfImages > 0){
+      hasImage = '[PHOTO]';
+    } %>
+    <%= hasImage %>
+  </figure>
   <p><% var mainLocation = (main.location).toUpperCase(); %><b><%= mainLocation + ' ' %></b><%= main.fullStory %><% var notSafeForWork = ''; if(main.nsfw){notSafeForWork = '[NSFW]';}%><%= ' ' + notSafeForWork %></p>
 </article>
 <aside>
   <article class='related-article'>
     <h4><%= aside.headLine %></h4>
+    <figure id='related-img'><%
+      var hasImage = '[NO MEDIA]';
+      if(aside.hasVideoPlaceholder){
+        hasImage = '[VIDEO]';
+      }
+      if(aside.numberOfImages > 0){
+        hasImage = '[PHOTO]';
+      } %>
+      <%= hasImage %>
+    </figure>
     <p><% var asideLocation = (aside.location).toUpperCase(); %><b><%= asideLocation + ' ' %></b><%= aside.fullStory %><% var notSafeForWork = ''; if(aside.nsfw){notSafeForWork = '[NSFW]';}%><%= ' ' + notSafeForWork %></p>
   </article>
 </aside>

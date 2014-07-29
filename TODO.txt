@@ -1,0 +1,11 @@
+Max Hubenthal
+Tuesday, July 29th, 2014
+
+Site TODOs:
+
+1. Make URLs pretty.
+2. Banner ad currently uses a CSS3 transition on "hover", implement for a mouse click.
+3. Make columns finish at same bottom edge (instead of current ragged bottom edge).
+4. Make section links active(i.e. bold) for the current section.
+5. Include a "<figcaption>" element to caption the media elements.
+6. Remove "<figure>[NO MEDIA]</figure>" placeholders from HTML.
